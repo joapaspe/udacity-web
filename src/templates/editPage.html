@@ -1,0 +1,24 @@
+{% extends "baseWiki.html" %}
+
+{%block Title %}
+{{namepage}}
+
+{%endblock%}
+{% block Content %}
+
+<form action="" method="post">
+<table>
+	<tr><td class="editor">
+		<textarea name="content">{{content | safe}}</textarea>
+	</td></tr>
+	
+	<tr><td>
+		<input type="submit" value="Save"></input>
+	</td></tr>
+	
+</table>
+</form>
+<div class="error">{{error}}</div>
+	
+{%endblock%}
+

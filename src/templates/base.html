@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/static/main.css" />
+
+  <title>Joan Blog</title>
+</head>
+
+<body>
+	
+	<div class="top-bar">
+		
+		{%if user %}
+			{{user}}
+		{% else %}
+		<a href="login/">login</a>|<a href="signup">signup</a>
+			
+		
+	</div>
+  <a href="/blog" class="main-title">
+    Joan
+  </a>
+
+  <div id="content">
+  {% block content %}
+  {% endblock %}
+  </div>
+  
+  <div class = "age">
+  	{{age}}
+  </div>
+</body>
+
+</html>
+

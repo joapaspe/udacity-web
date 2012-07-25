@@ -1,0 +1,32 @@
+{% extends "baseWiki.html" %}
+
+{%block Title %}
+{{title}}
+
+{%endblock%}
+{% block Content %}
+
+
+<table >
+{% for h in hist %}
+
+<tr>
+<td>
+<div class="date">
+	{{h.creation_data}}
+</div>
+</td>
+<td>
+<div class = "content">
+	{{h.content}}
+</div>
+</td>
+<td><div class="edit"><a href="{{namepage}}/edit">edit</a></div></td>
+<td><div class="view"><a href="{{namepage}}/view">view</a></div></td>
+</tr>
+{% endfor %}
+</table>
+<div class="error">{{error}}</div>
+{%endblock%}
+
+
